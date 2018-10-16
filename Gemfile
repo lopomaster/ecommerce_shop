@@ -65,3 +65,5 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 
 gem 'mysql2'
+
+gem 'solidus_gateway'
