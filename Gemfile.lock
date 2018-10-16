@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/solidusio/solidus_paypal_braintree.git
+  revision: e2b2f3e428ee02302b08e61b7f51dac7adc446cf
+  branch: master
+  specs:
+    solidus_paypal_braintree (0.4.0)
+      activemerchant (~> 1.48)
+      braintree (~> 2.65)
+      solidus (>= 1.0, < 3)
+      solidus_support (>= 0.1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +75,8 @@ GEM
     bindex (0.5.0)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
+    braintree (2.91.0)
+      builder (>= 2.0.0)
     builder (3.2.3)
     byebug (10.0.2)
     cancancan (2.3.0)
@@ -149,6 +162,9 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    kaminari-i18n (0.5.0)
+      kaminari
+      rails
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -213,6 +229,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails-i18n (5.1.1)
+      i18n (>= 0.7, < 2)
+      railties (>= 5.0, < 6)
     railties (5.2.1)
       actionpack (= 5.2.1)
       activesupport (= 5.2.1)
@@ -231,6 +250,9 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    routing-filter (0.6.2)
+      actionpack (>= 4.2, < 6)
+      activesupport (>= 4.2, < 6)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
     sass (3.6.0)
@@ -310,6 +332,8 @@ GEM
       activemerchant (~> 1.48, != 1.59.0, != 1.58.0)
       solidus_core (>= 1.1, < 3)
       solidus_support (>= 0.1.3)
+    solidus_i18n (2.0.0)
+      solidus_core (>= 1.1, < 3)
     solidus_sample (2.7.0)
       solidus_core (= 2.7.0)
     solidus_support (0.2.2)
@@ -373,15 +397,20 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
+  kaminari-i18n (~> 0.5.0)
   listen (>= 3.0.5, < 3.2)
   mysql2
   puma (~> 3.11)
   rails (~> 5.2.1)
+  rails-i18n (~> 5.1)
+  routing-filter (~> 0.6.0)
   sass-rails (~> 5.0)
   selenium-webdriver
   solidus
   solidus_auth_devise
   solidus_gateway
+  solidus_i18n (~> 2.0)
+  solidus_paypal_braintree!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
